@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Energy Prediction</title>
+</head>
+<body>
+    <h2>⚡ Power Plant Energy Prediction</h2>
+
+    <form action="/predict" method="post">
+        Temperature (AT): <input type="text" name="AT"><br><br>
+        Exhaust Vacuum (V): <input type="text" name="V"><br><br>
+        Pressure (AP): <input type="text" name="AP"><br><br>
+        Humidity (RH): <input type="text" name="RH"><br><br>
+
+        <button type="submit">Predict</button>
+    </form>
+
+    <h3>{{ prediction_text }}</h3>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</body>
+</html>
