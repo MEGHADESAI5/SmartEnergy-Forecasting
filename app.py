@@ -13,11 +13,11 @@ class ANNModel(nn.Module):
     def __init__(self):
         super(ANNModel, self).__init__()
         self.model = nn.Sequential(
-            nn.Linear(4, 16),
+            nn.Linear(4, 6),
             nn.ReLU(),
-            nn.Linear(16, 8),
+            nn.Linear(6, 6),
             nn.ReLU(),
-            nn.Linear(8, 1)
+            nn.Linear(6, 1)
         )
 
     def forward(self, x):
@@ -60,3 +60,7 @@ if __name__ == "__main__":
     import os
     port = int(os.environ.get("PORT", 5000))
     app.run(host="0.0.0.0", port=port)
+
+
+model = torch.load("full_model.pt")
+model.eval()
