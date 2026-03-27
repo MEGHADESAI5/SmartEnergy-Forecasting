@@ -201,3 +201,8 @@ This project demonstrates how to:
 ---
 
 🚀 *From model → to deployment → to real-world application*
+
+## 🌐 Live Demo  
+https://smartenergy-forecasting-1.onrender.com
+
+
